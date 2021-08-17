@@ -5,7 +5,7 @@ spring:
   application:
     name: API-GATEWAY
   config:
-    import: configserver:https://cloud-config-server-m.herokuapp.com/
+    import: configserver:https://cloud-config-server-m.herokuapp.com
 
   cloud:
     config:
@@ -63,3 +63,6 @@ hystrix:
 #      defaultZone: http://localhost:8761/eureka/
 #  instance:
 #    hostname: localhost
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
