@@ -1,7 +1,0 @@
-spring:
-  cloud:
-    config:
-      enabled: true
-      uri: configserver:https://cloud-config-server-m.herokuapp.com/
-      name: gateway
-      profile: prod

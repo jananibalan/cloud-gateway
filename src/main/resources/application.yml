@@ -4,8 +4,16 @@ server:
 spring:
   application:
     name: API-GATEWAY
+
   cloud:
+    config:
+      enabled: true
+      uri: configserver:https://cloud-config-server-m.herokuapp.com/
+      name: gateway
+      profile: prod
+
     gateway:
+
       routes:
         - id: USER-SERVICE
           uri: lb://USER-SERVICE
@@ -40,6 +48,9 @@ management:
     web:
       exposure:
         include: hystrix.stream
+
+
+
 
 
 #eureka:
